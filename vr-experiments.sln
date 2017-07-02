@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vr-experiments", "Assembly-CSharp-firstpass.csproj", "{5096D93D-A2CC-3532-9DC6-CCCD08C6F17C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vr-experiments", "Assembly-CSharp.csproj", "{40B32F6F-EBE2-B5E8-D644-110EB35483EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vr-experiments", "Assembly-CSharp-Editor.csproj", "{7BCED0F4-D5F4-5589-3625-7A97A2C3D46F}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5096D93D-A2CC-3532-9DC6-CCCD08C6F17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5096D93D-A2CC-3532-9DC6-CCCD08C6F17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5096D93D-A2CC-3532-9DC6-CCCD08C6F17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5096D93D-A2CC-3532-9DC6-CCCD08C6F17C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40B32F6F-EBE2-B5E8-D644-110EB35483EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40B32F6F-EBE2-B5E8-D644-110EB35483EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40B32F6F-EBE2-B5E8-D644-110EB35483EF}.Release|Any CPU.ActiveCfg = Release|Any CPU

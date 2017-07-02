@@ -50,10 +50,16 @@ public class tomato : MonoBehaviour {
 		splatObject = (GameObject) Instantiate (splatObject, transform.position, transform.rotation);
 			Destroy (gameObject);
 			//created = true;
+//		iTween.FadeTo(splatObject);
+		//FadeOut();
 		Destroy(splatObject, tomatoLifetime);
 
 		//}
 	}
+
+		/*public void FadeOut(){
+		iTween.ValueTo(gameObject, iTween.Hash("from", 1.0f, "to", 0.0f, "time", 1.5f, "easetype", "linear", "onupdate", "setAlpha"));
+				}8/
 	// Update is called once per frame
 	void Update () {
 		
