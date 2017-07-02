@@ -9,11 +9,11 @@ public class tomato : MonoBehaviour {
 	public float throwForce = 1.5f;
 	public GameObject splatObject;
 	public float tomatoLifetime;
-	public bool created = false;
+	public bool isSplatted = false;
 
 	// Use this for initialization
 	void Start () {
-		trackedObj = GetComponent<SteamVR_TrackedObject> ();	
+		trackedObj = GetComponent<SteamVR_TrackedObject> ();
 	}
 
 	void onTriggerStay(Collider col){
@@ -46,17 +46,25 @@ public class tomato : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision collision){
-		if (created == false) {
-			Instantiate (splatObject.gameObject, transform.position, transform.rotation);
+//		if (created == false) {
+		splatObject = (GameObject) Instantiate (splatObject, transform.position, transform.rotation);
 			Destroy (gameObject);
-			created = true;
+			//created = true;
+		Destroy(splatObject, tomatoLifetime);
 
 		//}
-
-	}
 	}
 	// Update is called once per frame
 	void Update () {
 		
+
 	}
+
+	/*void splat(){
+		if (isSplatted = true){
+			Instantiate (splatObject.gameObject, transform.position, transform.rotation);
+			Destroy (gameObject);
+			Debug.Log("Splat called!");
+		}
+		}*/
 }
