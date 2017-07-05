@@ -50,8 +50,8 @@ public class tomato : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		splatObject = (GameObject) Instantiate (splatObject, transform.position, transform.rotation);
 			Destroy (gameObject);
-		//Destroy(splatObject, tomatoLifetime);
-		   FadeOutSplat();
+		Destroy(splatObject, tomatoLifetime);
+		   //FadeOutSplat();
 		//if (isSplatted == true) {
 		//	Destroy (splatObject);
 		//}
@@ -60,7 +60,7 @@ public class tomato : MonoBehaviour {
 	void FadeOutSplat(){
 		iTween.ValueTo(gameObject, iTween.Hash(
 			"from", 1.0f, "to", 0.0f,
-			"time", 3f, "easetype", "linear",
+			"time", 1f, "easetype", "linear",
 			"onupdate", "setAlpha"));
 					isSplatted = true;
 	}

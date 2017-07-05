@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\handInteraction.cs" />
      <Compile Include="Assets\Scripts\objectMenuManager.cs" />
+     <Compile Include="Assets\Scripts\testTomato.cs" />
      <Compile Include="Assets\Scripts\tomato.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
