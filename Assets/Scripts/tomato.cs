@@ -17,18 +17,22 @@ public class tomato : MonoBehaviour {
 	void Start () {
 		trackedObj = GetComponent<SteamVR_TrackedObject> ();
 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> master
 	}
 
 	void onTriggerStay(Collider col){
-		if (GetComponent<Collider>().gameObject.CompareTag("tomato")){
+		if (GetComponent<Collider> ().gameObject.CompareTag ("tomato")) {
 			if (device.GetPressUp (SteamVR_Controller.ButtonMask.Trigger)) {
 				ThrowTomato (col);
-			} 
-			else if (device.GetPressDown (SteamVR_Controller.ButtonMask.Trigger)) {
+			} else if (device.GetPressDown (SteamVR_Controller.ButtonMask.Trigger)) {
 				GrabTomato (col);
 			}
 		}
 	}
+
 
 
 	void GrabTomato(Collider coli){
@@ -49,34 +53,32 @@ public class tomato : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision collision){
+<<<<<<< HEAD
 //		if (created == false) {
 
+=======
+>>>>>>> master
 		splatObject = (GameObject) Instantiate (splatObject, transform.position, transform.rotation);
 		Debug.Log ("Splat Called");
 			Destroy (gameObject);
-			//created = true;
-//		iTween.FadeTo(splatObject);
-		//FadeOut();
 		Destroy(splatObject, tomatoLifetime);
+<<<<<<< HEAD
 		Debug.Log ("Splat Destroyed");
 
+=======
+		   //FadeOutSplat();
+		//if (isSplatted == true) {
+		//	Destroy (splatObject);
+>>>>>>> master
 		//}
+	} 
+
+	void FadeOutSplat(){
+		iTween.ValueTo(gameObject, iTween.Hash(
+			"from", 1.0f, "to", 0.0f,
+			"time", 1f, "easetype", "linear",
+			"onupdate", "setAlpha"));
+					isSplatted = true;
 	}
 
-		/*public void FadeOut(){
-		iTween.ValueTo(gameObject, iTween.Hash("from", 1.0f, "to", 0.0f, "time", 1.5f, "easetype", "linear", "onupdate", "setAlpha"));
-				}8/
-	// Update is called once per frame
-	void Update () {
-		
-
-	}
-
-	/*void splat(){
-		if (isSplatted = true){
-			Instantiate (splatObject.gameObject, transform.position, transform.rotation);
-			Destroy (gameObject);
-			Debug.Log("Splat called!");
-		}
-		}*/
 }
