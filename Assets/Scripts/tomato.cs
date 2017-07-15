@@ -11,9 +11,12 @@ public class tomato : MonoBehaviour {
 	public float tomatoLifetime;
 	public bool isSplatted = false;
 
+
+
 	// Use this for initialization
 	void Start () {
 		trackedObj = GetComponent<SteamVR_TrackedObject> ();
+
 	}
 
 	void onTriggerStay(Collider col){
@@ -47,12 +50,15 @@ public class tomato : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision){
 //		if (created == false) {
+
 		splatObject = (GameObject) Instantiate (splatObject, transform.position, transform.rotation);
+		Debug.Log ("Splat Called");
 			Destroy (gameObject);
 			//created = true;
 //		iTween.FadeTo(splatObject);
 		//FadeOut();
 		Destroy(splatObject, tomatoLifetime);
+		Debug.Log ("Splat Destroyed");
 
 		//}
 	}
