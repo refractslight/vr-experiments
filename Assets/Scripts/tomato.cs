@@ -9,7 +9,7 @@ public class tomato : MonoBehaviour {
 	public float throwForce = 1.5f;
 	public GameObject splatObject;
 	public float tomatoLifetime;
-	public bool isSplatted = false;
+	//public bool isSplatted = false;
 
 
 
