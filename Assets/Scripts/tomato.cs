@@ -10,12 +10,15 @@ public class tomato : MonoBehaviour {
 	public GameObject splatObject;
 	public float tomatoLifetime;
 	//public bool isSplatted = false;
+	private Material myMat;
+	float lerpTime = 5; //Takes 5 seconds
 
 
 
 	// Use this for initialization
 	void Start () {
 		trackedObj = GetComponent<SteamVR_TrackedObject> ();
+		Material myMat = GetComponent<MeshRenderer>().material;
 
 <<<<<<< HEAD
 =======
@@ -73,12 +76,27 @@ public class tomato : MonoBehaviour {
 		//}
 	} 
 
-	void FadeOutSplat(){
-		iTween.ValueTo(gameObject, iTween.Hash(
-			"from", 1.0f, "to", 0.0f,
-			"time", 1f, "easetype", "linear",
-			"onupdate", "setAlpha"));
-					isSplatted = true;
+
+	void FadeOut(){
+		
+				//Define this in Start();
+
+		//Color matColor = myMat.color;
+		myMat.SetColor("_Color", Color.clear);
+
+		for(float i=0; i<1; i+=Time.deltaTime/lerpTime){
+
+			myMat.SetColor(Color.Lerp(matColor, Color.clear, i));
+
+		}
+	}
+		/*public void FadeOut(){
+		//iTween.ValueTo(gameObject, iTween.Hash("from", 1.0f, "to", 0.0f, "time", 1.5f, "easetype", "linear", "onupdate", "setAlpha"));
+			}*/
+	// Update is called once per frame
+	void Update () {
+		
+
 	}
 
 }
