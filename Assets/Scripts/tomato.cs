@@ -20,10 +20,6 @@ public class tomato : MonoBehaviour {
 		trackedObj = GetComponent<SteamVR_TrackedObject> ();
 		Material myMat = GetComponent<MeshRenderer>().material;
 
-<<<<<<< HEAD
-=======
-	
->>>>>>> master
 	}
 
 	void onTriggerStay(Collider col){
@@ -56,23 +52,14 @@ public class tomato : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision collision){
-<<<<<<< HEAD
-//		if (created == false) {
-
-=======
->>>>>>> master
 		splatObject = (GameObject) Instantiate (splatObject, transform.position, transform.rotation);
 		Debug.Log ("Splat Called");
 			Destroy (gameObject);
 		Destroy(splatObject, tomatoLifetime);
-<<<<<<< HEAD
+
 		Debug.Log ("Splat Destroyed");
 
-=======
-		   //FadeOutSplat();
-		//if (isSplatted == true) {
-		//	Destroy (splatObject);
->>>>>>> master
+
 		//}
 	} 
 
